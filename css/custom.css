@@ -1,0 +1,13 @@
+#logo {
+    max-width:100px;
+    max-height:50px;
+    margin-top: 10px;
+}
+
+.left-space{
+    margin-left: 10px;
+}
+
+.remove-bottom-margin{
+    margin-bottom: 0;
+}
