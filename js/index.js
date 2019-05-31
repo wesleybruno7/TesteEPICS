@@ -1,6 +1,6 @@
 var form = document.getElementById('addForm');
 var dinheiro = document.getElementById("dinheiro");
-var buttons = [...document.querySelectorAll('.itens')];
+var itemList = [...document.querySelectorAll('.itens')];
 
 addEventListenerInBtns();
 
@@ -20,9 +20,10 @@ function applyMaskMoney(e){
 };
 
 function addEventListenerInBtns(){
-    buttons.forEach(btn=>{
+    itemList.forEach(btn=>{
         btn.addEventListener('click', e=>{
-            console.log(e);
+            removerItem(btn);
+            //console.log(btn);
         });
     }); 
 };
@@ -38,4 +39,9 @@ function adicionarItem(e){
 // Remove item
 function removerItem(e){
     console.log("deletar");
+    var tr = e.parentElement;
+    console.log(e);
+    tr.removeChild(e);
+    //console.log(tr.children);
+    //itemList.removeChild();
 };
