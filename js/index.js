@@ -30,18 +30,29 @@ function addEventListenerInBtns(){
 
 // Add item
 function adicionarItem(e){
-
     e.preventDefault();
 
-    console.log("adicionar");
+    var infoToAdd = [];
+    //obtem os valores preenchidos nos inputs
+    var newItem = [...document.getElementsByClassName('entrada')];
+    newItem.forEach(vlr=>{
+        console.log(vlr.value);
+        infoToAdd.push(vlr.value);
+    });
+    
+    //cria uma nova tr na tabela
+    var tr = document.createElement('tr');
+    //adiciona classe
+    tr.className = 'itens';
+    //adiciona o texto com o valor digitado no campo
+
 };
 
 // Remove item
 function removerItem(e){
-    console.log("deletar");
     var tr = e.parentElement;
-    console.log(e);
-    tr.removeChild(e);
-    //console.log(tr.children);
-    //itemList.removeChild();
+    //console.log(e);
+    if(confirm("Deseja excluir o pedido?")){
+       tr.removeChild(e); 
+    };
 };
