@@ -3,11 +3,36 @@
     max-height:50px;
     margin-top: 10px;
 }
-
+.container-header{
+    margin: 0;
+    padding: 0;
+}
+.container-body{
+    margin: 0 1%;
+}
+.padding-body{
+    padding: 10px 0;
+}
 .left-space{
     margin-left: 10px;
 }
 
-.remove-bottom-margin{
+.remove-margin{
+    margin: 0;
+}
+.remove-padding{
+    padding: 0;
+}
+.full-page-menu{
+    height: 100%;
+}
+.adjust-btn-padding{
+    padding: 0px 8px;
+}
+.adjust-right-0{
+    padding-right: 0;
+    margin-right: 0;
+}
+.adjuste-table{
     margin-bottom: 0;
 }
