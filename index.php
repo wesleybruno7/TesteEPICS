@@ -106,7 +106,7 @@
                         ?>
                         
                         <div class="card mt-2">
-                            <div class="card-body remove-padding">
+                            <div class="card-body remove-padding" style="min-height:320px">
                                     <table class="table adjuste-table">
                                         <thead>
                                             <tr class>
