@@ -32,20 +32,25 @@ function addEventListenerInBtns(){
 function adicionarItem(e){
     e.preventDefault();
 
-    var infoToAdd = [];
+    newItens = [];
+    
     //obtem os valores preenchidos nos inputs
-    var newItem = [...document.getElementsByClassName('entrada')];
-    newItem.forEach(vlr=>{
-        console.log(vlr.value);
-        infoToAdd.push(vlr.value);
+    var inputValues = [...document.getElementsByClassName('entrada')];
+    inputValues.forEach(vlr=>{
+        newItens.push(vlr.value);
+        
     });
+    console.log(newItens);
     
     //cria uma nova tr na tabela
     var tr = document.createElement('tr');
+
     //adiciona classe
     tr.className = 'itens';
-    //adiciona o texto com o valor digitado no campo
-
+    
+    //adiciona o texto de entrada
+    
+    
 };
 
 // Remove item
