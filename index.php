@@ -41,7 +41,7 @@
                                     </li>
                                     <li class="list-group-item bg-primary text-white">
 
-                                        <a href="#" class="card-link text-white">
+                                        <a href="index.php" class="card-link text-white">
                                             <i class="fas fa-home"></i>
                                             <span class="left-space">Pagina inicial</span>
                                         </a>
@@ -99,9 +99,10 @@
                         
                         <?php
                         $mysqli = new mysqli('localhost', 'root', '', 'vendas') or die(mysqli_error($mysqli));
-                        $result = $mysqli->query("SELECT * FROM pedidos") or die($mysqli->error);
+                        $result = $mysqli->query("SELECT * FROM pedidos ORDER BY id ASC") or die($mysqli->error);
 
                         //pre_r($result);
+                        
                         ?>
                         
                         <div class="card mt-2">
@@ -124,9 +125,9 @@
                                                     <td><?php echo $row['id']; ?></td>
                                                     <td><?php echo $row['cliente']; ?></td>
                                                     <td><?php echo $row['produto']; ?></td>
-                                                    <td><?php echo $row['valor']; ?></td>
+                                                    <td class="text-right"><?php echo number_format($row['valor'], 2,',','.'); ?></td>
                                                     <td class="text-right">
-                                                        <button type="button" class="btn btn-danger adjust-btn-padding"> - </button>
+                                                        <a href="process.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger adjust-btn-padding">-</a>
                                                     </td>
                                                 </tr>
                                             <?php }; ?>

@@ -5,10 +5,12 @@ this.dinheiro.addEventListener('keyup', applyMaskMoney);
 
 //Aplica mascara do valor em "dinheiro", exibindo . e , nos devidos lugares.
 function applyMaskMoney(e){
-    $(document).ready(function(){
-        $("#dinheiro").maskMoney({
-            // define como deve ser "." para milhar e "," para decimal.
-            showSymbol:true, symbol:"R$", decimal:",", thousands:"."
+    if(e != NaN){
+        $(document).ready(function(){
+            $("#dinheiro").maskMoney({
+                // define como deve ser "." para milhar e "," para decimal.
+                showSymbol:true, symbol:"R$", decimal:",", thousands:"."
+            });
         });
-    });
+    };
 };
